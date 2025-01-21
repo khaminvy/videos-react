@@ -1,5 +1,6 @@
 export default function MovieCard({movie}){
 
+    console.log(movie)
     function onfavoritesClick(){
         alert("Click!")
     }
