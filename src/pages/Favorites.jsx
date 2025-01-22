@@ -1,3 +1,8 @@
 export default function Favorites(){
-    return <h1>OK</h1>
+    return (
+        <div className="favorites-empty">
+            <h2>No Favorites movies yet</h2>
+            <p>Star add movies to your favorites and they appear here!</p>
+        </div>
+    )
 }
