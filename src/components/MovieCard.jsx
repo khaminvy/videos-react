@@ -1,3 +1,5 @@
+import "../css/MovieCard.css"
+
 export default function MovieCard({movie}){
 
     console.log(movie)
