@@ -48,7 +48,7 @@
     opacity: 1;
   }
   
-  .favorite-btn {
+  .favorite-button {
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -89,6 +89,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    color: white;
   }
   
   .movie-info h3 {
