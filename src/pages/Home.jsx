@@ -27,9 +27,22 @@ export default function Home(){
         loadPopularMovies()
     }, []) 
 
-    const onHandleSearch = (e) => {
+    const onHandleSearch = async (e) => {
         e.preventDefault()
-        alert(searchQuery)
+        if (!searchQuery.trim()) return
+        if(loading) return
+
+        setLoading(true)
+        try {
+            const searchResults = await searchMovies(searchQuery)
+            setMovies(searchResults)
+            setError(null)
+        } catch (error) {
+            console.log(error)
+            setError("Fail to search movies...")
+        } finally {
+            setLoading(false)
+        }
         setSearchQuery("")
     }
 
