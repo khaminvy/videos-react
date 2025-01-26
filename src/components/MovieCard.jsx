@@ -5,7 +5,7 @@ export default function MovieCard({movie}){
 
     const {isFavorite, addToFavorites, removeFromFavorites} = useMovieContext()
 
-    const favorite = isFavorite()
+    const favorite = isFavorite(movie.id)
 
     function onfavoritesClick(e){
         e.preventDefault()
@@ -17,7 +17,7 @@ export default function MovieCard({movie}){
             <div className="movie-poster">
                 <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
                 <div className="movie-overlay">
-                    <button className={`favorite-button ${favorite ? "active" : ""}`} onClick={onfavoritesClick}>fav</button>
+                    <button className={`favorite-button ${ favorite ? "active" : ""}`} onClick={onfavoritesClick}>fav</button>
                 </div>
             </div>
             <div className="movie-info">
