@@ -17,7 +17,7 @@ export default function MovieCard({movie}){
             <div className="movie-poster">
                 <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
                 <div className="movie-overlay">
-                    <button className={`favorite-button ${ favorite ? "active" : ""}`} onClick={onfavoritesClick}>fav</button>
+                    <button className={`favorite-button ${ favorite ? "active" : ""}`} onClick={onfavoritesClick}>&#9829;</button>
                 </div>
             </div>
             <div className="movie-info">
